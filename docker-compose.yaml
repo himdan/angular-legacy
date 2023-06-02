@@ -1,0 +1,14 @@
+version: "3"
+services:
+  angular_console:
+    image: nvm_node_angular
+    volumes:
+      - "./angular_6:/app"
+    tty: true
+  angular_dev:
+    image: nvm_node_angular
+    command: 'bash -c "npm run start"'
+    volumes:
+      - "./angular_6:/app"
+    ports:
+      - "4200:4201"

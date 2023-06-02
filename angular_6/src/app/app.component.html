@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<table class="styled-table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Auth</th>
+    <th>Link</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entry of $entries|async">
+    <td>{{entry.API}}</td>
+    <td>{{entry.Category}}</td>
+    <td>{{entry.Description}}</td>
+    <td>{{entry.Auth}}</td>
+    <td><a [href]="entry.Link">{{entry.Link}}</a></td>
+  </tr>
+  </tbody>
+</table>
+
+
